@@ -13,8 +13,7 @@ window.onload = function()
 	var timeout;
 
 	init();
-
-
+	
 	function init()
 	{
 		var canvas = document.createElement('canvas');
@@ -34,7 +33,6 @@ window.onload = function()
 	
 	}
 	
-
 	function refreshCanvas()
 	{
 		snakee.advance();
@@ -53,7 +51,7 @@ window.onload = function()
 				snakee.eatApple = true;
 				do
 				{
-					//le serpent a mangé la pome
+					//the snake ate the apple
 					applee.setNewPosition();
 
 				}
@@ -70,10 +68,9 @@ window.onload = function()
 			timeout = setTimeout(refreshCanvas,delay);
 		}
 		
-	
 	}
 
-	//fonction qui gere l'echec du joueur 
+	//manages player failure 
 	function gameOver()
 	{
 		ctx.save();
@@ -189,7 +186,6 @@ window.onload = function()
 					default:
 					throw("Invalid direction");
 					
-
 			}
 
 			if(allowDirection.indexOf(newDirection)>-1)
@@ -197,7 +193,6 @@ window.onload = function()
 				this.direction = newDirection;
 
 			}
-
 
 		};
 
@@ -246,8 +241,6 @@ window.onload = function()
 			}
 
 		};
-
-
 
 	}
 
@@ -325,6 +318,4 @@ window.onload = function()
 
 	}
 
-
-	
 }
